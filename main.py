@@ -8,40 +8,30 @@ spooky_castle.welcome()
 RPGInfo.info()
 RPGInfo.author = "Raspberry Pi Foundation"
 
-kitchen = Room("Kitchen")
-kitchen.set_description("A dank and dirty room buzzing with flies.")
-
-dining_hall = Room("Dining Hall")
-dining_hall.set_description("A large room with ornate golden decorations on each wall.")
-
-ballroom = Room("Ballroom")
-ballroom.set_description("A vast room with a shiny wooden floor. Huge candlesticks guard the entrance.")
+#Add room objects here
 
 print("There are " + str(Room.number_of_rooms) + " rooms to explore.")
 
-kitchen.link_room(dining_hall, "south")
-dining_hall.link_room(kitchen, "north")
-dining_hall.link_room(ballroom, "west")
-ballroom.link_room(dining_hall, "east")
+#Add code to link between rooms here
 
 dave = Enemy("Dave", "A smelly zombie")
 dave.set_conversation("Brrlgrh... rgrhl... brains...")
 dave.set_weakness("cheese")
-dining_hall.set_character(dave)
+#Set room character here
 
 catrina = Friend("Catrina", "A friendly skeleton")
 catrina.set_conversation("Why hello there.")
-ballroom.set_character(catrina)
+#Set room character here
 
 cheese = Item("cheese")
 cheese.set_description("A large and smelly block of cheese")
-ballroom.set_item(cheese)
+#Set room item here
 
 book = Item("book")
 book.set_description("A really good book entitled 'Knitting for dummies'")
-dining_hall.set_item(book)
+#Set room item here
 
-current_room = kitchen
+#Set the current room here
 backpack = []
 
 dead = False
