@@ -6,7 +6,7 @@ from item import Item
 spooky_castle = RPGInfo("The Spooky Castle")
 spooky_castle.welcome()
 RPGInfo.info()
-RPGInfo.author = "Raspberry Pi Foundation"
+RPGInfo.author = "Stemate"
 
 #Add room objects here
 
